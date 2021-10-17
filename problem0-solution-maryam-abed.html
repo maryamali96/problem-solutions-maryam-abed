@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>whereIsMyFood</title>
+    </head>
+    <body>     
+        <input type="text" placeholder="enter here" id="textvalue">
+        <button id="checkbutton">check</button>
+        <script>
+         var element=new Array(2);
+for (let i=0;i<element.length;i++)
+{
+  element[i]=prompt("enter fridge element");
+}
+let txtval = document.querySelector("#textvalue");
+let chkbutt = document.querySelector("#checkbutton");
+chkbutt.addEventListener("click", whereIsMyFood);
+
+function whereIsMyFood() {
+  let result;
+ for(let i=0; i<element.length; i++) {
+   if(txtval.value===element[i]) {
+     result=("match found for " + txtval.value)
+     i=element.length;
+     }
+  else {
+    result=("-1 its not there")
+    }
+ }
+ alert(result);
+}
+        </script>
+        
+    </body>
+</html>
